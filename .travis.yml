@@ -13,3 +13,7 @@ before_install:
 script:
     - dotnet restore
     - dotnet build --configuration Release
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker build -t padmakumarnkg/inventorymanagement .
+    - docker push padmakumarnkg/inventorymanagement:latest
+    - docker push padmakumarnkg/inventorymanagement:$SHA
