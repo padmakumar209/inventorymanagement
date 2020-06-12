@@ -24,3 +24,4 @@ script:
     - az login --service-principal --username "$APP_ID" --password "$AK_SECRET" --tenant "$TENANT_ID"
     - az aks get-credentials --resource-group padma-kubernetes --name padma-aks-cluster-1
     - kubectl get nodes
+    - kubectl apply -f k8s
