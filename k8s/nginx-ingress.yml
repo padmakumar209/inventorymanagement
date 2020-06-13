@@ -4,11 +4,10 @@ metadata:
   name: inventory-management-ingress 
   namespace: default
   annotations:
-    kubernetes.io/ingress.class: nginx    
+    kubernetes.io/ingress.class: nginx
 spec:
-  rules:
-  - host: padma-inventory-management
-    http:
+  rules:  
+    - http:
       paths:     
       - backend:
           serviceName: server-cluster-ip-service
