@@ -25,3 +25,4 @@ script:
     - az aks get-credentials --resource-group padma-kubernetes --name padma-aks-cluster-1
     - kubectl get nodes
     - kubectl apply -f k8s
+    - kubectl set image deployments/server-deployment server=padmakumarnkg/inventorymanagement:$SHA
