@@ -41,6 +41,7 @@ namespace InventoryManagement
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UsePathBase("/inventory");
             app.UseStaticFiles();
 
             app.UseRouting();
