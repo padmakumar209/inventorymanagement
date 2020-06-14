@@ -15,11 +15,4 @@ spec:
             serviceName: server-cluster-ip-service
             servicePort: 5000
           path: /inventory(/|$)(.*)
-        - backend:
-            serviceName: server-cluster-ip-service
-            servicePort: 5000
-          path: /Products(/|$)(.*)
-        - backend:
-            serviceName: server-cluster-ip-service
-            servicePort: 5000
-          path: /Home(/|$)(.*)
+     
